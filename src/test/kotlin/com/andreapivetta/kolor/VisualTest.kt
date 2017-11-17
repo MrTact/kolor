@@ -19,17 +19,17 @@ object VisualTest : Spek({
 
     describe("Color::wrap test with foreground and background") {
         it("should print a string with red background and yellow foreground") {
-            println(RED.BG(YELLOW.wrap("Yellow foreground on red background")))
+            println(RED.BG(YELLOW("Yellow foreground on red background")))
         }
     }
 
     it("should print strings formatted appropriately") {
-        doPrint("Normal", BOLD.wrap("Bold"), "Normal")
-        doPrint("Normal", ITALIC.wrap("Italic"), "Normal")
-        doPrint("Normal", DIM.wrap("Dim"), "Normal")
-        doPrint("Normal", REVERSED.wrap("Reversed"), "Normal")
-        doPrint("Normal", BOLD.wrap(ITALIC.wrap("Bold Italic") + " Just bold"), "Normal")
-        doPrint("Normal", ITALIC.wrap(BOLD.wrap("Bold Italic") + " Just italic"), "Normal")
+        doPrint("Normal", BOLD("Bold"), "Normal")
+        doPrint("Normal", ITALIC("Italic"), "Normal")
+        doPrint("Normal", DIM("Dim"), "Normal")
+        doPrint("Normal", REVERSED("Reversed"), "Normal")
+        doPrint("Normal", BOLD(ITALIC("Bold Italic") + " Just bold"), "Normal")
+        doPrint("Normal", ITALIC(BOLD("Bold Italic") + " Just italic"), "Normal")
     }
 })
 

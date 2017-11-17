@@ -7,7 +7,9 @@ interface AnsiCode {
     val value: Int
     val reset: Int
 
-    fun wrap(text: String, begin: Int = value, end: Int = reset) = "${escape(begin)}$text${escape(end)}"
+    operator fun invoke(text: String) = wrap(text, value, reset)
+
+    fun wrap(text: String, begin: Int, end: Int) = "${escape(begin)}$text${escape(end)}"
 
     fun escape(code: Int) = "$ESCAPE[${code}m"
 }
