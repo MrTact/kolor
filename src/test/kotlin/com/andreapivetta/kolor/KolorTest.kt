@@ -5,9 +5,6 @@ import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 
-import com.andreapivetta.kolor.RESET
-import com.andreapivetta.kolor.ESCAPE
-
 object KolorTestForeground : Spek({
     describe("foreground") {
         it("should create a string that starts with an ANSI code and ends with the reset code") {
