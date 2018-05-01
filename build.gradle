@@ -16,7 +16,7 @@ plugins {
 
 def GROUP_ID = 'com.andreapivetta.kolor'
 def ARTIFACT_ID = 'kolor'
-def VERSION = '0.0.4'
+def VERSION = '0.0.5'
 
 group GROUP_ID
 version VERSION
